@@ -12,8 +12,18 @@
         "postal":"11111",
         "country":"nepal"
     },
-    "confirmAddition":{
-        "email":"q@gmail.com"
+    "edit":{
+        "fname":"aluu",
+        "lname":"ranjit",
+        "dob":"1999-08-11",
+        "email":"saxam@gmail.com",
+        "phone":"1234567898",
+        "adr1":"ktm",
+        "adr2":"pkr",
+        "city":"ktm",
+        "state":"04",
+        "postal":"11111",
+        "country":"nepal"
     }
     
 }
