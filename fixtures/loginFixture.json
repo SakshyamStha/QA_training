@@ -1,0 +1,15 @@
+{
+    "validUser":{
+        "userName": "sakshyam@gmail.com",
+        "password": "sakshyam"
+    },
+
+    "invalidUser":{
+        "userName":"asf",
+        "password":"jfsb"
+    },
+    "successful_login":{
+        "success":"Click on any contact to view the Contact Details"
+    }
+
+}
