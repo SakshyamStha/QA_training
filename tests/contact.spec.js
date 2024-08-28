@@ -36,7 +36,10 @@ test.describe('To add a new contact',()=>{
 test.describe('to see if the new contact is added or not',()=>{
     test('checking the added contact', async({page})=>{
         const add = new AddContact(page);
-        await add.AddedContact();
+        await page.locator('//td[contains(text(),"saxam@gmail.com")]').click();
+        await add.AddedContact(testData1.add.fname,
+            testData1.add.lname,
+            testData1.add.dob);
     })
 })
 
