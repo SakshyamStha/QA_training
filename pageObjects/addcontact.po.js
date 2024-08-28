@@ -17,6 +17,20 @@ exports.AddContact = class AddContact{
         this.submitbtn='//button[@id="submit"]';
         this.cancelbtn='//button[@id="cancel"]';
 
+        //for validation
+        this.savedfname='//span[@id="firstName"]';
+        this.savedlname ='//span[@id="lastName"]';
+        this.saveddob  ='//span[@id="birthdate"]';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+        // this.saved ='';
+
         //for the confirmation of new contact
         this.newcontact='//td[contains(text(),"saxam@gmail.com")]';
     }
@@ -37,9 +51,17 @@ exports.AddContact = class AddContact{
         await this.page.locator(this.cancelbtn).click();
     }
 
-    async AddedContact() {
-        const added = this.page.locator(this.newcontact);
-        await expect(added).toBeVisible();
+    async AddedContact(fname, lname, dob) {
+        // const added = this.page.locator(this.newcontact);
+        // await expect(added).toBeVisible();
+
+        const fnamevalidation = await this.page.locator(this.savedfname);
+        const lnamevalidation = await this.page.locator(this.savedlname);
+        const dobvalidation = await this.page.locator(this.saveddob);
+
+        await expect(fnamevalidation).toHaveText(fname);
+        await expect(lnamevalidation).toHaveText(lname);
+        await expect(dobvalidation).toHaveText(dob);
     }
     
 }
