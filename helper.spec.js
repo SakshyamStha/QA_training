@@ -6,8 +6,7 @@ let apiUrl
 async function getApiBaseUrl(){
     apiurl =process.env.API_BASE_URL;
     if(!apiUrl){
-        apiUrl=''
-    }
+        apiUrl='https://thinking-tester-contact-list.herokuapp.com/contacts'}
 }
 
 async function createEntity(userData, accessToken, module, {request}){
